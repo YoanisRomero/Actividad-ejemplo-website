@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    /* margen externo */
+    margin:0;
+    /* margen interno */
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Crar vaiables CSS*/
+:root{
+    --primary-color:#ffff00;
+    --secondary-color:#057aff;
+    --titulos:40px;
+    --parrafos:20px;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+header{
+    width: 100%;
+    /* vh = viewport height (altura de la pantalla)*/
+    height: 100vh;
+    position: relative;
+    /* para salir de una carpeta en cuañlquier lenguaje = ../ */
+    background: url("../img/bg-header.png");
+    /* cover = que cubra todo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* display: flex; = propiedad aplicada al contenedor padre para que los elementos esten los unos al lado de los otros */
+
+header nav{
+    width: 70%;
+    background-color: transparent;
+    /* centrar el objeto */
+    margin: 0 auto;
+    display: flex;
+    /* alinear de manera horizontal */
+    justify-content: space-between ;
+    /* alinear de manera vertical */
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* las clases se llaman con .
+    los id se llaman con #
+*/
+header nav .logo{
+    transition: .5s;
+}
+
+header nav .logo:hover{
+    transform: scale(0.9);
+}
+
+header nav .menu{
+    display: flex;
+
+}
+
+/* por norma tecnica deben de haber solo 3 selectores */
+nav .menu li{
+    margin: 0 20px;
+    list-style: none;
+}
+
+.menu li a{
+    color:#ffffff;
+    font-size: var(--parrafos);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: .5s;
+
+}
+
+
+.menu li a:hover{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+header #hero{
+    width: 50%;
+    min-width: 650px;
+    text-align: center ;
+    margin: 200px auto;
+}
+
+header #hero img{
+    transition: .5s;
+    cursor: pointer;
+}
+
+header #hero img:hover{
+    transform: rotate(360deg);
+}
+
+
+header #hero h1{
+    color: var(--primary-color);
+    font-size: var(--titulos);
+
+}
+
+header #hero p{
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+header #hero button{
+    margin-top: 90px;
+    background: var(--primary-color);
+    padding: 10px;
+    font-size: 30px;
+    color: #999;
+    border-color: transparent;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+header #hero button:hover{
+    border-color: #000;
+
+}
+
+main{
+    width: 100%;
+    position: relative;
+
+}
+
+#planes{
+    width: 100%;
+    text-align: center;
+    padding: 180px 0;
+    background: #fff;
+
+}
+
+#planes h2{
+    font-size: var(--titulos);
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+#planes p{
+    font-size: var(--parrafos);
+    color: #000;   
+}
+
+#planes .fila{
+    width: 70%;
+    min-width: 1000px;
+    display: flex;
+    margin: 60px auto;
+    justify-content: space-around;
+
+}
+
+#planes .fila .col-plan{
+    position: relative;
+}
+
+.fila .col-plan h3{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 25px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+}
+
+.fila .col-plan img{
+    transition: .2s;
+}
+
+.fila .col-plan img:hover{
+    border-radius: 60%;
+}
+
+
+#destinos{
+    width: 100%;
+    text-align: center;
+    padding: 120px 0 40px;
+    background: url("../img/bg-destinos.png");
+    background-size: cover;
+}
+
+#destinos h2{
+    font-size: var(--titulos);
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    font-weight: 700;
+
+}
+
+#destinos .fila{
+    display: flex;
+    justify-content: space-between;
+    width: 64%;
+    margin: 50px auto;
+}
+
+.fila .col-destinos{
+    width: 50%;
+    text-align: center;
+}
+
+
+.fila .col-destinos h3{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#contacto{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 100px 0 120px;
+    background: var(--primary-color);
+}
+
+#contacto h2{
+    font-size: var(--titulos);
+    margin-bottom: 60px;
+}
+
+#contacto p {
+    font-size: var(--parrafos);
+    margin-bottom: 40px;
+}
+
+#contacto form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contacto form .fila {
+    display: flex;
+}
+
+form .fila input{
+    width: 50%;
+    padding: 8px 12px;
+    font-size: var(--parrafos);
+    margin: 10px 20px;
+}
+
+form .fila select{
+    width: 53%;
+    padding: 8px 12px;
+    font-size: var(--parrafos);
+    margin: 10px 20px;
+}
+
+form button{
+    background: #acac03c2;
+    color:#fff;
+    margin-top: 40px;
+    padding: 12px 20px;
+    font-size: 22px;
+    border-radius: 4px;
+    border: transparent;
+}
+
+footer{
+    background: #000;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    font-size: 16px;
+}
